@@ -1,0 +1,176 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[unicode,colorlinks=true]{hyperref}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{titling}
+\textwidth 16cm \textheight 24.6cm
+\topmargin -1.3cm
+\oddsidemargin 0cm
+\begin{document}
+\pagestyle{empty}
+\title{Úlohy na procvičení \texttt{for} cyklu}
+\date{\vspace{-10ex}}
+\setlength{\droptitle}{-6em}
+\maketitle
+
+\begin{multicols}{2}
+
+\section{Hvězdičky}
+
+Napište program, který na vstupu dostane číslo \texttt{n} a vypíše \texttt{n}
+řádků s~hvězdičkami. Ukázka pro $n = 3$:
+\begin{verbatim}
+*
+*
+*
+\end{verbatim}
+
+\section{Více hvězdiček}
+
+Upravte předchozí program tak, aby na každém řádku bylo 5 hvězdiček. Zkuste
+použít 2 for cykly. Ukázka pro $n = 3$:
+\begin{verbatim}
+*****
+*****
+*****
+\end{verbatim}
+
+\section{Čtverec}
+
+Napište program, který dostane na vstupu číslo \texttt{n} a vytvoří pomocí
+textové grafiky čtverec o~rozměrech $n \times n$.\\
+Ukázka tabulky pro $n = 5$:
+\begin{verbatim}
+# # # # #
+# # # # #
+# # # # #
+# # # # #
+# # # # #
+\end{verbatim}
+
+\section{Prázdný čtverec}
+
+Upravte předchozí program tak, aby byl vnitřek čtverce tečkovaný.
+\begin{verbatim}
+# # # # #
+# . . . #
+# . . . #
+# . . . #
+# # # # #
+\end{verbatim}
+
+\section{Sudá čísla}
+Napište program, který na vstupu dostane číslo \texttt{n}. Program vypíše
+prvních \texttt{n} sudých čísel počínaje nulou.
+
+\section{Dělitelé}
+Napište program, který nechá uživatele zadat číslo \texttt{x}. Program vypíše
+všechny dělitele čísla \texttt{x}.
+
+\section{Násobilka}
+
+Napište program, který dostane na vstupu číslo \texttt{n} a vypíše tabulku
+násobilky pro čísla $1..n$.\\
+Ukázka tabulky pro $n = 5$:
+
+\begin{verbatim}
+    1 2 3 4 5
+    - - - - -
+1 | 1 2 3 4 5
+2 | 2 4 6 8 10
+3 | 3 6 9 12 15
+4 | 4 8 12 16 20
+5 | 5 10 15 20 25
+\end{verbatim}
+
+\section{Maximum}
+
+Napište program, který dostane na vstupu číslo \texttt{n} a vypíše tabulku
+o~rozměrech $n \times n$, kde každá buňka obsahuje maximum z~čísla sloupce
+a čísla řádku.\\
+Ukázka tabulky pro $n = 5$:
+
+\begin{verbatim}
+    1 2 3 4 5
+    - - - - -
+1 | 1 2 3 4 5
+2 | 2 2 3 4 5
+3 | 3 3 3 4 5
+4 | 4 4 4 4 5
+5 | 5 5 5 5 5
+\end{verbatim}
+
+\end{multicols}
+
+\newpage
+
+\section*{Jak vlastně funguje \texttt{for} cyklus?}
+
+For cyklus slouží k~opakování určité části programu.\\
+Používá se, pokud v~programu víme, kolikrát chceme opakovat určitou část
+programu.\\
+Když máme počet opakování uložený v~proměnné \texttt{n}, můžeme psát:
+
+\begin{verbatim}
+for(int i = 0; i < n; i++)
+{
+    // kod k~opakovani
+    // klidne vice radku
+}
+\end{verbatim}
+Proměnná \texttt{i} postupně nabývá hodnot $0, 1, 2, 3, ..., n-1$.\\
+Každému průchodu cyklem se říká iterace, máme třeba 1. iteraci, 2. iteraci atd.\\
+Pomocí příkazů v~hlavičce cyklu nastavujeme, jakou hodnotu má mít proměnná \texttt{i}
+před spuštěním cyklu, jaká je podmínka pro přechod do další iterace a co se
+má dělat s~proměnnou \texttt{i} na konci každé iterace.
+
+\subsection*{Příklad}
+
+Mějme program:
+
+\begin{verbatim}
+for(int i = 0; i < 5; i++)
+{
+    Console.WriteLine(i);
+}
+\end{verbatim}
+Tento program vypíše:
+
+\begin{verbatim}
+0
+1
+2
+3
+4
+\end{verbatim}
+
+\noindent\rule{\textwidth}{1pt}
+\section*{Bonusové úlohy}
+
+\begin{multicols}{2}
+
+\subsection{Pyramida}
+
+Napište program, který vypíše pyramidu o výšce, kterou zadá uživatel.
+
+\begin{verbatim}
+        #
+      # # #
+    # # # # #
+  # # # # # # #
+\end{verbatim}
+
+\subsection{Posloupnost}
+
+Napište program, který nechá uživatele zadat číslo \texttt{n}. Program vypíše
+prvních \texttt{n} členů následující posloupnosti:
+
+\noindent\texttt{1 1 2 1 2 3 1 2 3 4 1 2 3 4 5 ...}
+
+\end{multicols}
+
+\end{document}
