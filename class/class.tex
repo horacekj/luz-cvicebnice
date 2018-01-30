@@ -25,15 +25,21 @@ metody pro výpočet obvodu, obsahu a vrácení informačního řetězce.
 \begin{verbatim}
 class Circle
 {
-  public int GetPerimeter() { /* vrati obvod kruhu */ }
-  public int GetArea() { /* vrati obsah */ }
-  public int Info() { /* vrati informacni string */ }
+  public double GetPerimeter() { /* vrati obvod kruhu */ }
+  public double GetArea() { /* vrati obsah */ }
+  public string Info() { /* vrati informacni string */ }
 }
 
 Circle c = new Circle(new Point(-130, -130), 100);
-Console.WriteLine(c.GetPerimeter()) // Circle at (-130, -130) with radius 100
+Console.WriteLine(c.GetPerimeter()) // 628.3
+Console.WriteLine(c.Info()) // Circle at (-130, -130) with radius 100
 Console.WriteLine(c.GetArea()) // 31415.926535897932
 \end{verbatim}
+
+Nezapomeňte do třídy \texttt{Circle} dopsat konstruktor. Pro využití struktury
+\texttt{Point} napište na začátek programu: \texttt{using System.Drawing;}
+a proveďte přidání knihovny \textit{System.Drawing} (Project $\rightarrow$
+Add Reference $\rightarrow$ System.Drawing $\rightarrow$ Select).
 
 \section{Zásobník}
 
@@ -43,11 +49,14 @@ odebrání prvku a test na prázdnost.
 \begin{verbatim}
 class Stack
 {
-  public void Push(int val) { /* TODO */ }
-  public int Pop() { /* TODO */ }
-  public bool IsEmpty() { /* TODO */ }
+  public void Push(int val) { /* TODO */ } // pridani prvku
+  public int Pop() { /* TODO */ } // odebrani prvku
+  public bool IsEmpty() { /* TODO */ } // true kdyz je zasobnik prazdny
 }
 \end{verbatim}
+
+Nezapomeňte na začátek programu napsat
+\texttt{using System.Collections.Generic;}.
 
 \section{Knihovna}
 
@@ -69,5 +78,68 @@ Pro reprezentaci knih využijte třídu \texttt{Book} ze cvičení Kniha.
 % 2. ukázat private, public
 % 3. ukázat strukturu Point
 % 4. ukázat vytváření privátních atributů (a konvence pro pojmenování)
+
+\newpage
+
+\section*{Jak fungují třídy?}
+
+Třída je předpis pro vytváření instancí. Oproti strukturám je větší, používá
+se pro popis složitějších objektů (např. člověk, počítač, bagr, ...). Třída
+typicky obsahuje metody.
+
+Metoda je funkce, kterou můžeme volat na třídě.
+
+Příklad:
+
+\begin{verbatim}
+class Rectangle
+{
+  int w;
+  int h;
+
+  public int GetArea() { return w * h; }
+}
+\end{verbatim}
+
+\texttt{GetArea} je metoda třídy \texttt{Rectangle}, která vrací obsah čtverce.
+
+Můžeme jí zavolat:
+
+\begin{verbatim}
+Recangle r = new Rectangle();
+r.w = 10;
+r.h = 10;
+Console.WriteLine(r.GetArea()); // vypise 100
+\end{verbatim}
+
+Metoda se volá vždy na instanci. Metoda má přístup k hodnotám atributů. Metoda
+může atributy číst i měnit.
+
+Metoda může být privátní (\texttt{private}) nebo veřejná (\texttt{public}).
+Privátní metody lze volat jen z metod třídy, veřejné lze volata z vnější.
+Kdyby v předchozím příkladu bylo \texttt{private int GetArea}, nelze metodu
+\texttt{GetArea} zavolat a funkce \texttt{Main}.
+
+Privátní atributy pojmenovávejte tak, aby jejich jména začínala podtržítkem!
+
+V konstruktoru se typicky píše inicializace složitějších atributů. Příklad:
+
+\begin{verbatim}
+class NakupniSeznam
+{
+  private List<string> _l; // tady private nemusi byt
+
+  public NakupniSeznam() // konstruktor
+  {
+    this._l = new List<string>(); // tady this nemusi byt
+  }
+
+  public void Add(string name) { _l.Add(name); }
+  public void Remove(string name) { _l.Remove(name); }
+}
+\end{verbatim}
+
+V tomto příkladu se s privátním seznamem \texttt{\_l} pracuje jen pomocí metod
+\texttt{Add} a \texttt{Remove}.
 
 \end{document}
