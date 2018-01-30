@@ -1,0 +1,67 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{titling}
+\textwidth 16cm \textheight 24.6cm
+\topmargin -1.3cm
+\oddsidemargin 0cm
+\begin{document}
+\pagestyle{empty}
+\title{Úlohy na procvičení tříd}
+\date{\vspace{-12ex}}
+\setlength{\droptitle}{-6em}
+\setlength{\parindent}{0cm}
+\maketitle
+
+\section{Kruhy}
+
+Napište třídu pro reprezentaci kruhu s daným středem a poloměrem. Implementujte
+metody pro výpočet obvodu, obsahu a vrácení informačního řetězce.
+
+\begin{verbatim}
+class Circle
+{
+  public int GetPerimeter() { /* vrati obvod kruhu */ }
+  public int GetArea() { /* vrati obsah */ }
+  public int Info() { /* vrati informacni string */ }
+}
+
+Circle c = new Circle(new Point(-130, -130), 100);
+Console.WriteLine(c.GetPerimeter()) // Circle at (-130, -130) with radius 100
+Console.WriteLine(c.GetArea()) // 31415.926535897932
+\end{verbatim}
+
+\section{Zásobník}
+
+Vytvořte třídu pro reprezentaci zásobníku podporující operace přidání prvku,
+odebrání prvku a test na prázdnost.
+
+\begin{verbatim}
+class Stack
+{
+  public void Push(int val) { /* TODO */ }
+  public int Pop() { /* TODO */ }
+  public bool IsEmpty() { /* TODO */ }
+}
+\end{verbatim}
+
+\section{Knihovna}
+
+Vytvořte třídu \texttt{Library} pro reprezentaci kolekce knih s metodami pro
+\begin{enumerate}
+	\setlength\itemsep{0em}
+	\setlength{\parskip}{0pt}
+	\item přidání knihy,
+	\item odebrání knihy,
+	\item nalezení knihy podle názvu nebo ISBN,
+	\item nalezení všech knih daného autora,
+	\item nalezení všech knih s cenu pod zadanou mez.
+\end{enumerate}
+
+Pro reprezentaci knih využijte třídu \texttt{Book} ze cvičení Kniha.
+
+\end{document}
