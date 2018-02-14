@@ -55,8 +55,8 @@ class Stack
 }
 \end{verbatim}
 
-Nezapomeňte na začátek programu napsat
-\texttt{using System.Collections.Generic;}.
+Nápověda: pro reprezentaci zásobníku využijte seznam. Nezapomeňte na začátek
+programu napsat \texttt{using System.Collections.Generic;}.
 
 \section{Knihovna}
 
@@ -66,12 +66,13 @@ Vytvořte třídu \texttt{Library} pro reprezentaci kolekce knih s metodami pro
 	\setlength{\parskip}{0pt}
 	\item přidání knihy,
 	\item odebrání knihy,
-	\item nalezení knihy podle názvu nebo ISBN,
+	\item nalezení knihy podle názvu,
+	\item nalezení knihy podle ISBN,
 	\item nalezení všech knih daného autora,
 	\item nalezení všech knih s cenu pod zadanou mez.
 \end{enumerate}
 
-Pro reprezentaci knih využijte třídu \texttt{Book} ze cvičení Kniha.
+Pro reprezentaci knih využijte strukturu \texttt{Book} ze cvičení Kniha.
 
 % Metodické poznámky:
 % 1. ukázat metody
@@ -113,16 +114,16 @@ Console.WriteLine(r.GetArea()); // vypise 100
 \end{verbatim}
 
 Metoda se volá vždy na instanci. Metoda má přístup k hodnotám atributů. Metoda
-může atributy číst i měnit.
+může atributy číst i~měnit.
 
 Metoda může být privátní (\texttt{private}) nebo veřejná (\texttt{public}).
-Privátní metody lze volat jen z metod třídy, veřejné lze volata z vnější.
-Kdyby v předchozím příkladu bylo \texttt{private int GetArea}, nelze metodu
-\texttt{GetArea} zavolat a funkce \texttt{Main}.
+Privátní metody lze volat jen z metod třídy, veřejné lze volat i~z~vnější.
+Kdyby v~předchozím příkladu bylo \texttt{private int GetArea}, nelze metodu
+\texttt{GetArea} zavolat v~metodě \texttt{Main}.
 
 Privátní atributy pojmenovávejte tak, aby jejich jména začínala podtržítkem!
 
-V konstruktoru se typicky píše inicializace složitějších atributů. Příklad:
+V~konstruktoru se typicky píše inicializace složitějších atributů. Příklad:
 
 \begin{verbatim}
 class NakupniSeznam
