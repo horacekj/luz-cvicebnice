@@ -123,5 +123,40 @@ předaný seznam.
 %List<int> l = new List<int>();
 %\end{verbatim}
 
+\newpage
+
+\section*{Seznamy}
+
+Seznam je datová struktura, která umožňuje uložit více hodnot stejného typu.
+Do seznamu lze vkládat prvky a mazat z něj prvky. Řetězec se v mnoha ohledech
+chová stejně, jako seznam, jedná se o seznam znaků.
+
+Seznam čísel se v C\# deklaruje takto:
+
+\begin{verbatim}
+List<int> l = new List<int>();
+\end{verbatim}
+
+Proto, abyste mohli používat seznamy, musíte mít na začátku programu napsáno\\
+\texttt{using System.Collections.Generic;}.
+
+Seznam lze procházet \texttt{for} cyklem:
+
+\begin{verbatim}
+for (int i = 0; i < l.Count; i++)
+  Console.WriteLine(l[i]);
+\end{verbatim}
+
+Seznam se indexuje od 0, jeho délka je uložená v proměnné \texttt{l.Count}.
+
+Seznam lze procházet také \texttt{foreach} cyklem:
+
+\begin{verbatim}
+foreach (string s in l)
+  Console.WriteLine(s);
+\end{verbatim}
+
+Řetězec lze procházet stejně, jako seznam (po znacích), jen nelze jednotlivé
+znaky měnit.
 
 \end{document}
