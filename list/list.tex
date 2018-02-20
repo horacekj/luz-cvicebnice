@@ -1,0 +1,80 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{titling}
+\usepackage{enumitem}
+\textwidth 16cm \textheight 24.6cm
+\topmargin -1.3cm
+\oddsidemargin 0cm
+\begin{document}
+\pagestyle{empty}
+\title{Úlohy na procvičení seznamů}
+\date{\vspace{-10ex}}
+\setlength{\droptitle}{-6em}
+\maketitle
+
+\setlength\parindent{0pt}
+
+%\begin{multicols}{2}
+
+\section{Výpis seznamu}
+
+Napište program, který vypíše prvky ze seznamu.
+
+\section{Načtení seznamu}
+
+Napište program, který načte prvky do seznamu.
+
+\section{Základní funkce}
+
+Napište funkce nad seznamem čísel, které zjistí:
+
+\begin{itemize}[noitemsep,nolistsep]
+	\item součet všech čísel v seznamu,
+	\item nejvyšší číslo v seznamu,
+	\item zda se určitá hodnota vyskytuje v seznamu,
+\end{itemize}
+
+\begin{verbatim}
+int MySum(List<int> numbers)
+int MyMax(List<int> numbers)
+bool MyIn(List<int> numbers, int number)
+\end{verbatim}
+
+\section{Součin}
+
+Napište funkci, která vypočítá součin čísel v seznamu, ale ignoruje přitom
+případné nuly.
+
+\section{Modifikace vs. vytváření seznamu}
+
+Napište funkci \texttt{DoubleAll}, která dostane na vstupu seznam čísel a
+každý jeho prvek vynásobí dvěma. Dále napište funkci \texttt{CreateDoubled},
+která dostane na vstupu seznam čísel a vrátí nový seznam získaný ze vstupního
+tak, že každý prvek vynásobí dvěma. Na rozdíl od předchozí funkce však nemění
+předaný seznam.
+
+\section{Zploštení}
+
+Napište funkci, jejímž vstupem je seznam seznamů a výstupem je seznam, který
+obsahuje prvky všech jednotlivých seznamů.
+
+%\end{multicols}
+
+%\noindent\rule{\textwidth}{1pt}
+%\section*{Bonusové úlohy}
+
+%\newpage
+
+%\section*{Základy seznamů}
+
+%\begin{verbatim}
+%List<int> l = new List<int>();
+%\end{verbatim}
+
+
+\end{document}
