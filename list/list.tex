@@ -19,15 +19,7 @@
 
 \setlength\parindent{0pt}
 
-%\begin{multicols}{2}
-
-\section{Výpis seznamu}
-
-Napište program, který vypíše prvky ze seznamu.
-
-\section{Načtení seznamu}
-
-Napište program, který načte prvky do seznamu.
+\begin{multicols}{2}
 
 \section{Základní funkce}
 
@@ -42,13 +34,69 @@ Napište funkce nad seznamem čísel, které zjistí:
 \begin{verbatim}
 int MySum(List<int> numbers)
 int MyMax(List<int> numbers)
-bool MyIn(List<int> numbers, int number)
+bool MyIn(List<int> numbers,
+          int number)
 \end{verbatim}
 
 \section{Součin}
 
 Napište funkci, která vypočítá součin čísel v seznamu, ale ignoruje přitom
 případné nuly.
+
+\section{Zdvojení písmen}
+
+Napište funkci, která vrátí nový řetězec, ve kterém bylo každé písmenko
+zdvojeno.
+
+\begin{verbatim}
+string Duplication(stringtext)
+Duplication("cs a") // ccss  aa
+\end{verbatim}
+
+\section{Cenzura}
+
+Napište funkci, která zcenzuruje dodaný řetězec tak, že každé druhé písmeno nahradí za X.
+
+\begin{verbatim}
+string Censorship(string text)
+Censorship("LosKarlos") // LXsXaXlXs
+\end{verbatim}
+
+\section{Počet A}
+
+Napište funkci, která spočítá počet výskytů písmene (znaku) \texttt{A/a}.
+
+\begin{verbatim}
+int CountA(string text)
+CountA("Liska Adelka") // 3
+\end{verbatim}
+
+\section{Znaky na stejných pozicích}
+
+Napište funkci, která dostane dva řetězce a vypíše ty znaky, které jsou na
+shodných pozicích stejné.
+
+\begin{verbatim}
+void StringIntersection(
+  string left, string right)
+
+StringIntersection("ZIRAFA", "KARAFA")
+// R A F A
+StringIntersection("PES", "KOCKA")
+// (prazdny retezec)
+\end{verbatim}
+
+\section{Palindrom}
+
+Napište funkci, která vrátí, zda je řetězec palindromem. Palindromem je takové
+slovo či věta, která má při čtení v libovolném směru stejný význam, například
+nepotopen či jelenovi pivo nelej (mezery můžete ignorovat).
+
+\begin{verbatim}
+void Palindrom(string text)
+Palindrom("JELENOVIPIVONELEJ")
+// true
+\end{verbatim}
 
 \section{Modifikace vs. vytváření seznamu}
 
@@ -58,16 +106,15 @@ která dostane na vstupu seznam čísel a vrátí nový seznam získaný ze vstu
 tak, že každý prvek vynásobí dvěma. Na rozdíl od předchozí funkce však nemění
 předaný seznam.
 
-\section{Zploštení}
-
-Napište funkci, jejímž vstupem je seznam seznamů a výstupem je seznam, který
-obsahuje prvky všech jednotlivých seznamů.
-
-%\end{multicols}
+\end{multicols}
 
 %\noindent\rule{\textwidth}{1pt}
 %\section*{Bonusové úlohy}
 
+%\section{Zploštení}
+
+%Napište funkci, jejímž vstupem je seznam seznamů a výstupem je seznam, který
+%obsahuje prvky všech jednotlivých seznamů.
 %\newpage
 
 %\section*{Základy seznamů}
