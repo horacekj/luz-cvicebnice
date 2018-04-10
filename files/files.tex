@@ -1,0 +1,99 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{titling}
+\usepackage{enumitem}
+\textwidth 16cm \textheight 24.6cm
+\topmargin -1.3cm
+\oddsidemargin 0cm
+\begin{document}
+\pagestyle{plain}
+\title{Úlohy na procvičení práce se soubory}
+\date{\vspace{-10ex}}
+\setlength{\droptitle}{-6em}
+\maketitle
+
+\setlength\parindent{0pt}
+
+\section{Frekvenční analýza}
+
+Vytvořte program, který provede frekvenční analýzu textu v~zadaném souboru.
+Frekvenční analýza vypíše, kolik se v~souboru nachází znaků od každého písmene.
+
+Příklad:
+
+\begin{verbatim}
+a: 25
+b: 5
+c: 8
+...
+\end{verbatim}
+
+\section{Frekvenční analýza podruhé}
+
+Upravte předchozí program tak, aby výsledek zapisoval do zadaného souboru.
+
+\section{Generování hesel}
+
+Napište program, kterému zadáte jméno souboru a počet hesel a on do souboru
+vygeneruje daný počet hesel. Hesla jsou náhodné kombinace znaků a číslic.
+
+\begin{itemize}[noitemsep,nolistsep]
+	\item Pokud chcete, můžete nechat uživatele zadat délku hesel.
+	\item Pokud chcete, můžete hesla generovat také ze speciálních znaků.
+\end{itemize}
+
+\section{Průměrný počet slov ve větě}
+
+Napište program, který analyzuje text v~zadaném souboru a vrátí průměrný počet
+slov ve větě.
+
+\section{CSV}
+
+Napište program, který načte soubor \texttt{znamky.csv} a u~každého studenta
+vypíše průměr všech jeho známek.
+
+\newpage
+
+\section*{Soubory v~C\#}
+
+Soubor je lineární zápis dat na disku. My budeme pracovat hlavně s~textovými
+soubory, kde je každý znak uložen jako nějaké konkrétní číslo. Soubory můžeme
+číst a můžeme do nich zapisovat. V~C\# používáme pro práci se soubory objekty
+\texttt{StreamReader} a \texttt{StreamWriter}.
+
+\subsection*{Čtení ze souboru}
+
+Čtení ze souboru může vypadat takto:
+
+\begin{verbatim}
+using (StreamReader sr = new StreamReader("muj_soubor.txt"))
+{
+  string prvni_radek = sr.ReadLine();
+  // V promenne prvni_radek je obsah prvniho_radku souboru.
+}
+\end{verbatim}
+
+Při práci se soubory nezapomeňte na začátek programu přidat
+\texttt{using System.IO;}.
+
+\subsection*{Zápis do souboru}
+
+\begin{verbatim}
+using (StreamWriter sw = new StreamWriter("muj_soubor.txt"))
+{
+  sw.WriteLine("Tento text se zapise na prvni radek.");
+}
+\end{verbatim}
+
+Při otevření souboru pro zápis je soubor přepsán. Pokud soubor neexistuje, je
+vytvořen jako prázdný.
+
+Všimněte si, že práce se soubory probíhá velice podobně jako práce s konzolí.
+Také zde najdete funkce \texttt{ReadLine} a \texttt{WrireLine}.
+
+\end{document}
