@@ -39,8 +39,8 @@ Upravte předchozí program tak, aby výsledek zapisoval do zadaného souboru.
 
 \section{Generování hesel}
 
-Napište program, kterému zadáte jméno souboru a počet hesel a on do souboru
-vygeneruje daný počet hesel. Hesla jsou náhodné kombinace znaků a číslic.
+Napište program, kterému zadáte jméno souboru a~počet hesel a~on do souboru
+vygeneruje daný počet hesel. Hesla jsou náhodné kombinace znaků a~číslic.
 
 \begin{itemize}[noitemsep,nolistsep]
 	\item Pokud chcete, můžete nechat uživatele zadat délku hesel.
@@ -49,12 +49,12 @@ vygeneruje daný počet hesel. Hesla jsou náhodné kombinace znaků a číslic.
 
 \section{Průměrný počet slov ve větě}
 
-Napište program, který analyzuje text v~zadaném souboru a vrátí průměrný počet
+Napište program, který analyzuje text v~zadaném souboru a~vrátí průměrný počet
 slov ve větě.
 
 \section{CSV}
 
-Napište program, který načte soubor \texttt{znamky.csv} a u~každého studenta
+Napište program, který načte soubor \texttt{znamky.csv} a~u~každého studenta
 vypíše průměr všech jeho známek.
 
 \newpage
@@ -63,8 +63,8 @@ vypíše průměr všech jeho známek.
 
 Soubor je lineární zápis dat na disku. My budeme pracovat hlavně s~textovými
 soubory, kde je každý znak uložen jako nějaké konkrétní číslo. Soubory můžeme
-číst a můžeme do nich zapisovat. V~C\# používáme pro práci se soubory objekty
-\texttt{StreamReader} a \texttt{StreamWriter}.
+číst a~můžeme do nich zapisovat. V~C\# používáme pro práci se soubory objekty
+\texttt{StreamReader} a~\texttt{StreamWriter}.
 
 \subsection*{Čtení ze souboru}
 
@@ -74,7 +74,7 @@ soubory, kde je každý znak uložen jako nějaké konkrétní číslo. Soubory 
 using (StreamReader sr = new StreamReader("muj_soubor.txt"))
 {
   string prvni_radek = sr.ReadLine();
-  // V promenne prvni_radek je obsah prvniho_radku souboru.
+  // V promenne prvni_radek je obsah prvniho radku souboru.
 }
 \end{verbatim}
 
@@ -94,6 +94,6 @@ Při otevření souboru pro zápis je soubor přepsán. Pokud soubor neexistuje,
 vytvořen jako prázdný.
 
 Všimněte si, že práce se soubory probíhá velice podobně jako práce s~konzolí.
-Také zde najdete funkce \texttt{ReadLine} a \texttt{WriteLine}.
+Také zde najdete funkce \texttt{ReadLine} a~\texttt{WriteLine}.
 
 \end{document}
